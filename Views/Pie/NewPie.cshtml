@@ -1,0 +1,12 @@
+@model PieViewModel
+
+<h1>New Pie</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+     @using (Html.BeginForm("PostNewPie", "Pie", FormMethod.Post))
+     {
+        @Html.LabelFor(pie => pie.Pie.Name)
+        @Html.TextBoxFor(pie => pie.Pie.Name, "", new { @class = "form-control" })
+
+        <input type="submit" value="Guardar" />    
+     }
+</div>
